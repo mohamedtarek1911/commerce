@@ -21,7 +21,7 @@ function App() {
       path: "/",
       element: <Layout />,
       children: [
-        { index: true, element: <Home /> },
+        // { index: true, element: <Home /> },
         { path: "category/:id", element: <Category /> },
         { path: "cart", element: <Cart /> },
         { path: "*", element: <Layout /> },
@@ -32,18 +32,20 @@ function App() {
   return (
     <div className="App">
       <Provider store={store}>
-        {/* <BrowserRouter>
+        <BrowserRouter>
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/category/:id" element={<Category />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="*" element={<Home />} />
           </Routes>
           <Footer />
-        </BrowserRouter> */}
-        <RouterProvider router={routes}>
+        </BrowserRouter>
+        {/* <RouterProvider router={routes}>
           <Layout />
-        </RouterProvider>
+          <Home />
+        </RouterProvider> */}
       </Provider>
     </div>
   );
