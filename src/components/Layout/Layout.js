@@ -1,0 +1,16 @@
+import React from "react";
+import { Outlet } from "react-router-dom";
+import { Home } from "../../pages";
+import Footer from "../Footer/Footer";
+import Navbar from "../Navbar/Navbar";
+
+export default function Layout() {
+  return (
+    <>
+      <Navbar />
+      <Home />
+      <Outlet />
+      <Footer />
+    </>
+  );
+}
