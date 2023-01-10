@@ -8,7 +8,7 @@ import { formatPrice } from '../../utils/helpers';
 
 const SingleProduct = () => {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [qty, setQty] = useState(1);
 
   const { data: product } = useSelector(state => state.modal);
@@ -39,7 +39,7 @@ const SingleProduct = () => {
     }
     dispatch(addToCart(tempProduct));
     dispatch(setIsModalVisible(false));
-    navigate('/cart');
+    // navigate('/cart');
   };
 
   const modalOverlayHandler = (e) => {
